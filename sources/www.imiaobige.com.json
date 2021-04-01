@@ -1,7 +1,7 @@
 {
   "name": "妙笔阁",
   "url": "www.imiaobige.com/",
-  "version": 101,
+  "version": 102,
   "search": {
       "url": "https://www.imiaobige.com/search.html@post->searchkey=${key}",
       "charset": "UTF-8",
@@ -24,7 +24,7 @@
 },
   "catalog": {
       "list": "#readerlists > ul:gt(0) > li",
-      "name": "a@js->${this}.replace(/^\\s*(No\\.|第)?(\\d{1,4}|[一二三四五六七八九十百千]{1,7})章?(、|:|：|\\.|-|\\s|(?=[\\(\\{（【])|$)/,\"第$2章 \").replace(/^(.{3,})[（［【\\[\\{\\(].*?[更合字修费求订票赏鲜盟推歉谢祝节年].*?[）］】\\]\\}\\)]$/,\"$1\")",
+      "name": "a",
       "chapter": "a"
   },
   "chapter": {
