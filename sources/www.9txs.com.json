@@ -1,9 +1,9 @@
 {
-    "name": "九桃网",
+    "name": "九桃小说",
     "url": "www.9txs.com/",
-    "version": 101,
+    "version": 102,
     "search": {
-        "url": "https://so.9txs.com/search.html@post->searchkey=${key}",
+        "url": "https://so.9txs.com/www@post->searchkey=${key}",
         "list": "ul.library > li",
         "name": "a.bookname",
         "author": "a.author",
@@ -31,6 +31,6 @@
     },
     "chapter": {
         "content": "#content > p:gt(0)",
-        "purify": ["您可以在百度里搜索.+最新章节！"]
+        "purify": ["您可以在百度.+最新章节！"]
     }
 }
