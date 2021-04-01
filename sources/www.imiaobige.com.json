@@ -1,33 +1,39 @@
 {
   "name": "妙笔阁",
-  "url": "www.imiaobige.com/",
-  "version": 101,
-  "search": {
-      "url": "https://www.imiaobige.com/search.html@post->searchkey=${key}",
-      "charset": "UTF-8",
-      "list": "#sitembox > dl",
-      "name": "h3 > a",
-      "author": "dd.book_other > a:nth-child(2)",
-      "cover": "dt > a > img",
-      "summary": ".book_des",
-      "detail": "h3 > a"
+  "version": 100,
+  "category": 1,
+  "url": "https://www.imiaobige.com",
+  "charset": "UTF-8",
+  "metadata": {
+    "name": ["dd:nth-child(2)>h3>a", "meta[property=og:novel:book_name]@attr->content", ".booktitle>h1"],
+    "author": ["dd:nth-child(3)>a:nth-child(2)", "meta[property=og:novel:author]@attr->content", ".booktitle>#author>a"],
+    "cover": ["dt>a>img@attr->src", "meta[property=og:image]@attr->content", "#bookimg>img@attr->src"],
+    "summary": ["dd.book_des", "#bookintro", "meta[property=og:description]@attr->content"],
+	"category": ["meta[property=og:novel:category]@attr->content", ".count>ul>li:nth-child(1)>span"],
+    "status": ["meta[property=og:novel:status]@attr->content@js->if(${this} == '连载中') '连载'; else '完结'", ".count>ul>li:nth-child(2)>span@attr->content@js->if(${this} == '连载中') '连载'; else '完结'"],
+	"update": ["meta[property=og:novel:update_time]@attr->content", ".new>.uptime"],
+	"lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content", ".new>.keywords>a"],
+	"link": ["dt>a@attr->href"],
+	"catalog": ["#newlist>.newrap>strong>a@attr->href"]
   },
-  "detail": {
-    "name": "meta[property=og:novel:book_name]@attr->content",
-    "author": "meta[property=og:novel:author]@attr->content",
-    "cover": "meta[property=og:image]@attr->content",
-    "summary": "meta[property=og:description]@attr->content",
-    "status": "meta[property=og:novel:status]@attr->content",
-    "update": "meta[property=og:novel:update_time]@attr->content",
-    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
-    "catalog": ".motion > a:nth-child(1)"
-},
   "catalog": {
-      "list": "#readerlists > ul:gt(0) > li",
+    "list": "#readerlists>ul",
+    "orderBy": 0,
+	"booklet": {
+      "name": "h3",
+      "list": "li"
+	},
+    "chapter": {
       "name": "a@js->${this}.replace(/^\\s*(No\\.|第)?(\\d{1,4}|[一二三四五六七八九十百千]{1,7})章?(、|:|：|\\.|-|\\s|(?=[\\(\\{（【])|$)/,\"第$2章 \").replace(/^(.{3,})[（［【\\[\\{\\(].*?[更合字修费求订票赏鲜盟推歉谢祝节年].*?[）］】\\]\\}\\)]$/,\"$1\")",
-      "chapter": "a"
+      "link": "a@attr->href"
+    }
   },
-  "chapter": {
-      "content": "#content > p:gt(0)"
+  "content": {
+    "text": "#content",
+	"filter": [""]
+  },
+  "search": {
+    "link": "https://www.imiaobige.com/search.html@post->searchkey=${key}&searchkey=${key}",
+    "list": "#sitembox>dl"
   }
 }
