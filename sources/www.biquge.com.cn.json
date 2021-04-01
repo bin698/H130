@@ -24,8 +24,8 @@
     },
     "catalog": {
         "list": "#list > dl > dd",
-        "name": "a",
         "chapter": "a",
+        "name": "a",        
         "purify": ["（求.*?）",
             "（.*?盟主）",
             "（.*?赏）",
@@ -33,7 +33,7 @@
             "（.*?阅）",
             "（.*?更）",
             "（.*?加）"
-        ]
+        ]        
     },
     "chapter": {
         "content": "#content",        
