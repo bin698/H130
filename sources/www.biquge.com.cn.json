@@ -24,7 +24,7 @@
     },
     "catalog": {
         "list": "#list > dl > dd",
-        "name": "a@replace->月票->W",
+        "name": "a@replace->（求.*?）->",
         "chapter": "a"
     },
     "chapter": {
