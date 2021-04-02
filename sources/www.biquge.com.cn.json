@@ -24,16 +24,8 @@
     },
     "catalog": {
         "list": "#list > dl > dd",
-        "chapter": "a",
-        "name": "a@attr->href@replace->（求.*?）->",
-        "purify": ["（求.*?）",
-            "（.*?盟主）",
-            "（.*?赏）",
-            "（.*?票）",
-            "（.*?阅）",
-            "（.*?更）",
-            "（.*?加）"
-        ]        
+        "name": "a@attr->href@replace->月票->W",
+        "chapter": "a"
     },
     "chapter": {
         "content": "#content",        
