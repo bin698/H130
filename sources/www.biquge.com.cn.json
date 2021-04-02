@@ -1,5 +1,5 @@
 {
-    "name": "笔趣阁ᶜⁿ",
+    "name": "笔趣阁ᶜᵒᵐ",
     "url": "www.biquge.com.cn/",
     "version": 103,
     "search": {
@@ -25,7 +25,7 @@
     "catalog": {
         "list": "#list > dl > dd",
         "chapter": "a",
-        "name": "a",        
+        "name": "a@attr->href@replace->（求.*?）->",
         "purify": ["（求.*?）",
             "（.*?盟主）",
             "（.*?赏）",
