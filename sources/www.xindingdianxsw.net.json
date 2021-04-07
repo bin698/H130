@@ -4,12 +4,11 @@
     "version": 105,
     "search": {
         "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
-        "charset": "utf-8",
-        "list": ".recommend>.hot_sale",
-        "name": "a>.title",
-        "author": "a>.author:nth-child(2)@match->(?<=作者：)(.+)",
-        "cover": "",
-        "detail": "a"
+        "list": "ul.library > li",
+        "name": "a.bookname",
+        "author": "a.author",
+        "cover": "a.bookimg > img",
+        "detail": "a.bookname"
     },
     "detail": {
         "name": "meta[property=og:novel:book_name]@attr->content",
@@ -19,15 +18,19 @@
         "status": "meta[property=og:novel:status]@attr->content",
         "update": "meta[property=og:novel:update_time]@attr->content",
         "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
-        "catalog": ".recommend>h2:nth-child(3)>a"
+        "catalog": "a.more"
     },
     "catalog": {
-        "list": "#chapterlist>p:nth-child(n+2)",
+        "list": "div.read > dl:gt(0)",
+        "booklet": {
+            "name": "b",
+            "list": "dd"
+        },
         "name": "a",
-        "chapter": "a@attr->href@replace->wap.xding->www.xding"
+        "chapter": "a"
     },
     "chapter": {
-        "content": "#content",
-        "filter": ["@div", "@script"]
+        "content": "#content > p",
+        "purify": ["您可以在百度.+最新章节！"]
     }
 }
