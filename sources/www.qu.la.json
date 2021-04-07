@@ -1,9 +1,9 @@
 {
     "name": "笔趣阁ˡᵃ",
     "url": "www.qu.la",
-    "version": 102,
+    "version": 103,
     "search": {
-        "url": "https://www.qu.la/ar.php@post->keyWord=${key}",
+        "url": "https://www.qu.la/ar.php?keyWord=${key}",
         "charset": "UTF-8",
         "list": ".result-list>.result-item",
         "name": ".result-game-item-title-link",

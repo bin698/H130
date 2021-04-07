@@ -1,9 +1,9 @@
 {
     "name": "顶点小说",
-    "url": "www.xindingdianxsw.net",
-    "version": 101,
+    "url": "m.xindingdianxsw.net",
+    "version": 102,
     "search": {
-        "url": "https://m.xindingdianxsw.net/search.html@post->keyword=${key}",
+        "url": "https://m.xindingdianxsw.net/search.html?keyword=${key}",
         "charset": "utf-8",
         "list": ".result-list>.result-item",
         "name": ".result-game-item-title-link",
