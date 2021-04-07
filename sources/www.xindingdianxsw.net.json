@@ -1,32 +1,33 @@
 {
     "name": "顶点小说",
     "url": "m.xindingdianxsw.net",
-    "version": 102,
+    "version": 105,
     "search": {
-        "url": "https://m.xindingdianxsw.net/search.html?keyword=${key}",
+        "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
         "charset": "utf-8",
-        "list": ".result-list>.result-item",
-        "name": ".result-game-item-title-link",
-        "author": ".result-game-item-info-tag:nth-child(1)>span:nth-child(2)",
-        "cover": ".result-game-item-pic-link-img@attr->src",
-        "summary": "p.result-game-item-desc",
-        "detail": ".result-game-item-title-link@attr->href"
+        "list": ".recommend>.hot_sale",
+        "name": "a>.title",
+        "author": "a>.author:nth-child(2)@match->(?<=作者：)(.+)",
+        "cover": "",
+        "detail": "a"
     },
-    "detail":{
+    "detail": {
         "name": "meta[property=og:novel:book_name]@attr->content",
         "author": "meta[property=og:novel:author]@attr->content",
         "cover": "meta[property=og:image]@attr->content",
         "summary": "meta[property=og:description]@attr->content",
         "status": "meta[property=og:novel:status]@attr->content",
         "update": "meta[property=og:novel:update_time]@attr->content",
-        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".recommend>h2:nth-child(3)>a"
     },
     "catalog": {
-        "list": "#list>dl>dd",
+        "list": "#chapterlist>p:nth-child(n+2)",
         "name": "a",
-        "chapter": "a@attr->href"
+        "chapter": "a@attr->href@replace->wap.xding->www.xding"
     },
-    "chapter":{
-        "content": "#content"
+    "chapter": {
+        "content": "#content",
+        "filter": ["@div", "@script"]
     }
 }
