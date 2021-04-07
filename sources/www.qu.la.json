@@ -4,33 +4,24 @@
     "version": 106,
     "search": {
         "url": "https://www.qu.la/ar.php?keyWord=${key}",
-        "list": "ul.library > li",
-        "name": "a.bookname",
-        "author": "a.author",
-        "cover": "a.bookimg > img",
-        "detail": "a.bookname"
+        "list": ".result-list > div",
+        "name": "h3",
+        "author": "div > p:nth-child(1) > span:nth-child(2)",
+        "cover": "img",
+        "summary": ".result-game-item-detail > p",        
+        "detail": "h3 > a"
     },
     "detail": {
-        "name": "meta[property=og:novel:book_name]@attr->content",
-        "author": "meta[property=og:novel:author]@attr->content",
-        "cover": "meta[property=og:image]@attr->content",
-        "summary": "meta[property=og:description]@attr->content",
-        "status": "meta[property=og:novel:status]@attr->content",
-        "update": "meta[property=og:novel:update_time]@attr->content",
-        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
-        "catalog": "a.more"
+        "status": "#info > p:nth-child(3)",
+        "update": "#info > p:nth-child(4)@match->(?<=最后更新：).+",
+        "lastChapter": "#info > p:nth-child(5)"
     },
     "catalog": {
-        "list": "div.read > dl:gt(0)",
-        "booklet": {
-            "name": "b",
-            "list": "dd"
-        },
+        "list": "#list > dl > dd",
         "name": "a",
         "chapter": "a"
     },
     "chapter": {
-        "content": "#content > p",
-        "purify": ["您可以在百度.+最新章节！"]
+        "content": "#content"
     }
 }
