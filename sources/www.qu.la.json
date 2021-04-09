@@ -4,9 +4,9 @@
     "version": 106,
     "search": {
         "url": "https://www.qu.la/ar.php?keyWord=${key}",
-        "list": ".result-list > div",
-        "name": "h3",
-        "author": "div > p:nth-child(1) > span:nth-child(2)",
+        "list": ".s3",
+        "name": ".s2",
+        "author": ".s4",
         "cover": "img",
         "summary": ".result-game-item-detail > p",        
         "detail": "h3 > a"

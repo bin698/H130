@@ -3,12 +3,12 @@
     "url": "m.xindingdianxsw.net",
     "version": 105,
     "search": {
-        "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
-        "list": "ul.library > li",
-        "name": "a.bookname",
-        "author": "a.author",
-        "cover": "a.bookimg > img",
-        "detail": "a.bookname"
+        "url": "https://m.xindingdianxsw.net/search.html?searchkey=${key}",
+        "list": ".list>li",
+        "name": "name",
+        "author": "author",
+        "cover": "cover",
+        "detail": "name"
     },
     "detail": {
         "name": "meta[property=og:novel:book_name]@attr->content",
@@ -21,11 +21,7 @@
         "catalog": "a.more"
     },
     "catalog": {
-        "list": "div.read > dl:gt(0)",
-        "booklet": {
-            "name": "b",
-            "list": "dd"
-        },
+        "list": ".list>dd>a",
         "name": "a",
         "chapter": "a"
     },
