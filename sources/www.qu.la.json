@@ -3,10 +3,10 @@
     "url": "www.qu.la",
     "version": 106,
     "search": {
-        "url": "https://www.qu.la/ar.php?keyWord=${key}",
+        "url": "https://www.qu.la/ar.php@post->keyWord=${key}",
         "list": ".s3",
-        "name": ".s2",
-        "author": ".s4",
+        "name": ".title",
+        "author": ".author",
         "cover": "img",
         "summary": ".result-game-item-detail > p",        
         "detail": "h3 > a"

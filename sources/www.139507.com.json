@@ -1,13 +1,12 @@
 {
     "name": "第三中文",
     "url": "www.139507.com",
-    "version": 104,
+    "version": 105,
     "search": {
         "url": "https://www.139507.com/modules/article/search.php?searchkey=${key}",
-        "charset": "gbk",
-        "list": ".toplist > li",
-        "name": ".s1",
-        "author":".s3",
+        "list": ".list > li",
+        "name": ".book_name",
+        "author":".author",
         "cover":"",
         "detail": ".s2 >a"
     },
@@ -22,7 +21,7 @@
         "catalog":""
     },
     "catalog": {
-        "list": "#list > dl >.clear ~ dd",
+        "list": "#list > dl",
         "name": "a",
         "chapter": "a"
     },
