@@ -1,14 +1,14 @@
 {
     "name": "顶点小说",
     "url": "m.xindingdianxsw.net",
-    "version": 105,
+    "version": 106,
     "search": {
-        "url": "https://m.xindingdianxsw.net/search.html?searchkey=${key}",
+        "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
         "list": ".list>li",
-        "name": "name",
-        "author": "author",
-        "cover": "cover",
-        "detail": "name"
+        "name": ".name",
+        "author": ".author",
+        "cover": ".cover",
+        "detail": ".name"
     },
     "detail": {
         "name": "meta[property=og:novel:book_name]@attr->content",
