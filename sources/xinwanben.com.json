@@ -1,9 +1,9 @@
 {
     "name": "完本神站",
-    "url": "xinwanben.com/",
+    "url": "xinwanben.com",
     "version": 106,
     "search": {
-        "url": "https://m.xinwanben.com/s.php@post->keyword=${key}",
+        "url": "https://m.xinwanben.com/s21041001.php@post->keyword=${key}",
          "charset": "utf-8",
         "list": ".listBottom>ul>a",
         "name": "h4",
