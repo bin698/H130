@@ -5,10 +5,10 @@
     "search": {
         "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
         "list": ".list>li",
-        "name": ".name",
-        "author": ".author",
-        "cover": ".cover",
-        "detail": ".name"
+        "name": "name",
+        "author": "author",
+        "cover": "cover",
+        "detail": "name"
     },
     "detail": {
         "name": "meta[property=og:novel:book_name]@attr->content",
