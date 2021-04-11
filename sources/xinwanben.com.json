@@ -1,7 +1,7 @@
 {
     "name": "完本神站",
     "url": "xinwanben.com",
-    "version": 106,
+    "version": 107,
     "search": {
         "url": "https://m.xinwanben.com/s21041001.php@post->keyword=${key}",
          "charset": "utf-8",
@@ -21,7 +21,7 @@
     },
     "chapter": {
         "content":".readerCon",
-    "page": ".readPage>a:nth-child(3):matches(下一页)",
+    "page": ".readPage>a:nth-child(3):matches(下一章)",
     "purify": ["一秒记住.*?coM",
         "提示.*?看的书！",
         "-->>本章未完.*?阅读",
