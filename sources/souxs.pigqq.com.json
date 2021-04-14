@@ -1,6 +1,6 @@
 {
     "name": "笔趣阁ᵃ³",
-    "url": "xs.pigqq.com",
+    "url": "souxs.pigqq.com",
     "version": 100,
     "search": {
         "url": "https://souxs.pigqq.com/search.aspx?&key={key}",
@@ -8,7 +8,7 @@
         "name": "$.Name",
         "author": "$.Author",
         "cover": "$.Img",
-        "detail": "https://infosxs.pigqq.com/BookFiles/Html/${$._id}?view=chapters 
+        "detail": "https://infosxs.pigqq.com/BookFiles/Html/${$._id}?view=chapters"
     },
     "detail": {
         "catalog": ""
