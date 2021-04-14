@@ -1,0 +1,24 @@
+{
+    "name": "JIASTON",
+    "url": "sou.jiaston.com",
+    "version": 100,
+    "search": {
+        "url": "https://sou.jiaston.com/search.aspx?key={key}",
+        "list": "$.data[:5]",
+        "name": "Name",
+        "author": "Author",
+        "cover": "Img",
+        "detail": "https://novel.riji8.com/mix-atoc/${$._id}?view=chapters"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "$..chapters[*]",
+        "name": "$2",
+        "chapter": "$1.html"
+    },
+    "chapter": {
+        "content": "$.data.content"
+    }
+}

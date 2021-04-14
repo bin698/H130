@@ -1,7 +1,7 @@
 {
     "name": "醋溜儿文学",
     "url": "clewx.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://m.clewx.com/search/keyword/${key}",
         "list": ".partlist-info>dl",
@@ -24,6 +24,7 @@
         "chapter": "a"
     },
     "chapter": {
-        "content": ".content"  
+        "content": ".content",
+        "purify": ["本章节.*?##学"]  
         }
 }
