@@ -1,6 +1,6 @@
 {
-    "name": "JIASTON",
-    "url": "sou.jiaston.com",
+    "name": "小说大全",
+    "url": "kuaiapi.jiaston.com",
     "version": 100,
     "search": {
         "url": "https://sou.jiaston.com/search.aspx?key={key}&page=1&siteid=app2",
