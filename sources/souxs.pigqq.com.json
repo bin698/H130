@@ -4,6 +4,7 @@
     "version": 100,
     "search": {
         "url": "https://souxs.pigqq.com/search.aspx?&key={key}",
+        "charset": "UTF-8",
         "list": "$..data[*]",
         "name": "$.Name",
         "author": "$.Author",
