@@ -1,0 +1,32 @@
+{
+    "name": "书虫网",
+    "url": "www.shuchong.info",
+    "version": 101,
+    "search": {
+        "url": "https://www.shuchong.info/search/?searchkey=${key}",
+        "list": ".library > li",
+        "name": "a.bookname",
+        "author":"a.author",
+        "cover":"a.booking > img",
+        "detail": "a.bookname"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":"a.more"
+    },
+    "catalog": {
+        "list": ".read > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {    
+        "content": "#content>p",
+        "purify":["您可以在百.+查找最新章节！"]
+    }
+}
