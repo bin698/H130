@@ -1,0 +1,25 @@
+{
+    "name": "App-3",
+    "url": "www.biqugeapp.com",
+    "version": 100,
+    "search": {
+        "url": "https://sou.jiaston.com/search.aspx?key={{key}}&page=1&siteid=app2",
+        "charset": "UTF-8",
+        "list": "$.data",
+        "name": "$.Name",
+        "author": "$.Author",
+        "cover": "$.Img",
+        "detail": "https://infos.anchengcn.com/BookFiles/Html/${$._id}?view=chapters"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "$..[?(@.hasContent)]",
+        "name": "$.name",
+        "chapter": "$.id"
+    },
+    "chapter": {
+        "content": "$..content"
+    }
+}
