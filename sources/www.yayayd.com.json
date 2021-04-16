@@ -1,7 +1,7 @@
 {
     "name": "丫丫阅读",
     "url": "www.yayayd.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://www.yayayd.com/search/result.html?searchtype=all&searchkey=${key}",
         "list": ".main > div > div > ul > li",
@@ -23,6 +23,6 @@
     "chapter": {
         "content": ".pt-read-text > p",
         "page": ".pt-nextchapter:matches(下一页)",
-        "purify": ["((https|http)?:\/\/).+html","(www).+?(.com|.net|.cn|.org|.info)","(笔趣阁).+?(.com)","本章未完.+?页","第(.+)章(.+)\\n"]
+        "purify": ["((https|http)?:\/\/).+html","(www).+?(.com|.net|.cn|.org|.info)","(笔趣阁).+?(.com)","本章未完(.+)共(.+)页","第(.+)章(.+)\\n"]
     }
 }
