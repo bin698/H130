@@ -4,27 +4,30 @@
     "version": 102,
     "search": {
         "url": "https://www.e1w.net/modules/article/search.php@post->searchkey=${key}",
-        "charset": "UTF-8",
-        "list": "tbody > tr:nth-child(n+2)",
-        "name": "td:nth-child(2) > p > a",
-        "detail": "tr > td:nth-child(2) > p > a"
+        "charset": "utf-8",
+        "list": "div.result-list > div",
+        "name": "a.result-game-item-title-link > span",
+        "author": "div.result-game-item-info > p:nth-child(1) > span:nth-child(2)",
+        "cover": ".result-game-item-pic > a > img",
+        "summary": ".result-game-item-desc",
+        "detail": "a.result-game-item-pic-link"
     },
     "detail": {
-        "cover": " div.info1 > img",
-        "author": "h3:nth-child(2) > a",
-        "update": "p:nth-child(2) > font",
-        "name": " div.info2 > h1",
-        "status": "div.info3 > p:nth-child(1)@match->(?<=写作状态：).+",
-        "lastChapter": " div.panel-body > p:nth-child(3) > a",
-        "summary": " div.info2 > div > p"
+        "name": "meta[property=og:title]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
     },
     "catalog": {
-        "list": "div:nth-child(5)> div>div>div>ul>li",
-        "name": "li>a",
-        "chapter": "li>a"
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
     },
-    "chapter": {    
-        "content": "#content>p",
-        "purify":["您可以在百.+查找最新章节！"]
+    "chapter": {
+        "content": "#content"
     }
 }

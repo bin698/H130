@@ -4,26 +4,30 @@
     "version": 107,
     "search": {
         "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
-        "charset": "UTF-8",
-        "list": ".lastest>ul>li",
-        "name": ".n2>a",
-        "author": ".a2>a",
-        "detail":".n2>a"
+        "charset": "utf-8",
+        "list": "div.result-list > div",
+        "name": "a.result-game-item-title-link > span",
+        "author": "div.result-game-item-info > p:nth-child(1) > span:nth-child(2)",
+        "cover": ".result-game-item-pic > a > img",
+        "summary": ".result-game-item-desc",
+        "detail": "a.result-game-item-pic-link"
     },
     "detail": {
-        "cover":".cover>img",
-        "status": ".info>p:nth-child(3)>i:nth-child(3)",
-        "update": ".info>p:nth-child(4)",
-        "lastChapter": ".info>p:nth-child(5)",
-        "summary":".info>p:nth-child(7)",
-        "catalog":"footer>a"
-        },
+        "name": "meta[property=og:title]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
     "catalog": {
-        "list": ".mulu>li:nth-child(n+11)",
-        "name": "li>a",
-        "chapter": "li>a"
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
     },
     "chapter": {
-        "content": ".content"
+        "content": "#content"
     }
 }
