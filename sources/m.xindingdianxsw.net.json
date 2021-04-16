@@ -1,25 +1,29 @@
 {
     "name": "顶点小说",
     "url": "m.xindingdianxsw.net/",
-    "version": 106,
+    "version": 107,
     "search": {
         "url": "https://m.xindingdianxsw.net/search.html@post->searchkey=${key}",
-        "list": ".list>li",
-        "name": "name",
-        "author": "author",
-        "cover": "cover",
-        "detail": "${a}"
+        "charset": "UTF-8",
+        "list": ".lastest>ul>li",
+        "name": ".n2>a",
+        "author": ".a2>a",
+        "detail":".n2>a"
     },
     "detail": {
-        "catalog": ""
-    },
+        "cover":".cover>img",
+        "status": ".info>p:nth-child(3)>i:nth-child(3)",
+        "update": ".info>p:nth-child(4)",
+        "lastChapter": ".info>p:nth-child(5)",
+        "summary":".info>p:nth-child(7)",
+        "catalog":"footer>a"
+        },
     "catalog": {
-        "list": ".list>dd>a",
-        "name": "a",
-        "chapter": "a"
+        "list": ".mulu>li:nth-child(n+11)",
+        "name": "li>a",
+        "chapter": "li>a"
     },
     "chapter": {
-        "content": "#content > p",
-        "purify": ["您可以在百度.+最新章节！"]
+        "content": ".content"
     }
 }

@@ -1,29 +1,27 @@
 {
     "name": "顶点小说",
     "url": "www.e1w.net",
-    "version": 101,
+    "version": 102,
     "search": {
-        "url": "https://www.e1w.net/modules/article/search.php?searchkey=${key}",
-        "list": ".library > li",
-        "name": "a.bookname",
-        "author":"a.author",
-        "cover":"a.booking > img",
-        "detail": "a.bookname"
+        "url": "https://www.e1w.net/modules/article/search.php@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(2) > p > a",
+        "detail": "tr > td:nth-child(2) > p > a"
     },
     "detail": {
-        "name":"meta[property=og:novel:book_name]@attr->content",
-        "author":"meta[property=og:novel:author]@attr->content",
-        "cover":"meta[property=og:image]@attr->content",
-        "summary":"meta[name=description]@attr->content",
-        "status":"meta[property=og:novel:status]@attr->content",
-        "update":"meta[property=og:novel:update_time]@attr->content",
-        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
-        "catalog":"a.more"
+        "cover": " div.info1 > img",
+        "author": "h3:nth-child(2) > a",
+        "update": "p:nth-child(2) > font",
+        "name": " div.info2 > h1",
+        "status": "div.info3 > p:nth-child(1)@match->(?<=写作状态：).+",
+        "lastChapter": " div.panel-body > p:nth-child(3) > a",
+        "summary": " div.info2 > div > p"
     },
     "catalog": {
-        "list": ".read > dl > dd",
-        "name": "a",
-        "chapter": "a"
+        "list": "div:nth-child(5)> div>div>div>ul>li",
+        "name": "li>a",
+        "chapter": "li>a"
     },
     "chapter": {    
         "content": "#content>p",
