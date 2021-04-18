@@ -1,0 +1,25 @@
+{
+    "name": "爱趣ᵃᵖᵖ",
+    "url": "api.jspwjx.cn",
+    "version": 100,
+    "search": {
+        "url": "https://api.jspwjx.cn/api/v1/novelsearch?content={{key}}&pageIndex={{page}}&pageSize=20&type=2",
+        "charset": "UTF-8",
+        "list": "$.chapterName",
+        "name": "$.name",
+        "author": "$.author",
+        "cover": "$.picture",
+        "detail": "http://statics.rungean.com/static/book/zip/${$._id}?view=chapters"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "$.data[*]",
+        "name": "$.name",
+        "chapter": "$.content_url"
+    },
+    "chapter": {
+        "content": "result"
+    }
+}
