@@ -3,7 +3,7 @@
     "url": "sou.jiaston.com",
     "version": 100,
     "search": {
-        "url": "https://sou.jiaston.com/search.aspx?key={key}&page=1&siteid=app2",
+        "url": "https://sou.jiaston.com/search.aspx?key={key}",
         "charset": "UTF-8",
         "list": "data",
         "name": "Name",

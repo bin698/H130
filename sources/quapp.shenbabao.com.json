@@ -1,9 +1,9 @@
 {
     "name": "神书宝",
     "url": "quapp.shenbabao.com",
-    "version": 100,
+    "version": 101,
     "search": {
-        "url": "https://sou.jiaston.com/search.aspx?key={key}&page=Page&siteid=app2",
+        "url": "https://sou.jiaston.com/search.aspx?key={key}",
         "charset": "UTF-8",
         "list": "$..data[*]",
         "name": "$.Name",

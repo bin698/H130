@@ -1,9 +1,9 @@
 {
     "name": "App-4",
     "url": "shuapi.jiaston.com",
-    "version": 100,
+    "version": 101,
     "search": {
-        "url": "https://shuapi.jiaston.com/search.aspx?key={{key}}",
+        "url": "https://shuapi.jiaston.com/search.aspx?key={key}",
         "charset": "UTF-8",
         "list": "$..data[*]",
         "name": "$.Name",
