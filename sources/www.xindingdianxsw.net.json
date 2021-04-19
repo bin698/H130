@@ -23,7 +23,7 @@
     "chapter": {
         "content":"#content>p",
         "filter": ["@center", "@p", "%-->>"],
-        "page": "#linkNext:matches(下一页)"
+        "page": "#linkNext:matches(下一页)"，
         "purify": ["喜欢(.+)速度最快。","本章未完(.+)下一(.+)更精彩！"]
     }
 }
