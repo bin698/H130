@@ -1,7 +1,7 @@
 {
     "name": "顶点小说",
     "url": "www.xindingdianxsw.net",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://www.xindingdianxsw.net/search.html@post->searchkey=${key}",
         "charset": "utf-8",
@@ -16,7 +16,7 @@
      "catalog": ""
     },
     "catalog": {
-        "list": "#list>dd>a",
+        "list": "dl>dd:nth-child(n+14)",
         "name": "a",
         "chapter": "a"
     },
