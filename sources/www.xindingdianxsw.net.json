@@ -4,30 +4,26 @@
     "version": 101,
     "search": {
         "url": "https://www.xindingdianxsw.net/search.html@post->searchkey=${key}",
-        "list": "#nr",
-        "charset":"gb2312",
+        "charset": "utf-8",
+        "list": "#sitembox>dl",
         "name": "h3 > a",
-        "cover": "img",
+        "author": ".book_other>span:nth-child(1)",
+        "cover":"img",
         "detail": "h3 > a"
     },
     "detail": {
-        "name":"meta[property=og:novel:book_name]@attr->content",
-        "author":"meta[property=og:novel:author]@attr->content",
-        "cover":"meta[property=og:image]@attr->content",
-        "summary":"meta[property=og:description]@attr->content",
-        "status":"meta[property=og:novel:status]@attr->content",
-        "update":"meta[property=og:novel:update_time]@attr->content",
-        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
-        "catalog":""
+     "name":"h1",
+     "catalog": ""
     },
     "catalog": {
-        "list": "#chapterList > li",
+        "list": "dl>dd:nth-child(n+14)",
         "name": "a",
         "chapter": "a"
     },
-    "chapter": {    
-        "content": "#TextContent>p",
-        "purify":["铅笔小说","（继续下一页）","！！禁止转码、禁止阅读模式，部分内容隐藏，请退出浏览器阅读模式！","\\[.+?\\..+?\\..+?\\]","部分内容隐藏.+阅读模式"],
-        "page":".mlfy_page > a:nth-child(5)@match->(.+_..html)"
+    "chapter": {
+        "content":"#content>p",
+        "filter": ["@center", "@p", "%-->>"],
+        "page": "#linkNext:matches(下一页)"
+        "purify": ["喜欢(.+)速度最快。","本章未完(.+)下一(.+)更精彩！"]
     }
 }
