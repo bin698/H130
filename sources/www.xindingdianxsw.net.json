@@ -21,8 +21,8 @@
         "chapter": "a"
     },
     "chapter": {
-        "content":"#content > p:gt(0)",
+        "content":"#content>p",
+        "page": "#next_url",
         "purify": ["喜欢(.+)速度最快。","本章未完(.+)下一(.+)更精彩！"]
-
     }
 }
