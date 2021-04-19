@@ -1,7 +1,7 @@
 {
     "name": "顶点小说",
     "url": "www.xindingdianxsw.net",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://www.xindingdianxsw.net/search.html@post->searchkey=${key}",
         "charset": "utf-8",
@@ -22,7 +22,7 @@
     },
     "chapter": {
         "content":"#content>p",
-        "page":".buttom_next>a",        
+        "page": ".readPage>a:nth-child(3):matches(下一页)",
         "purify": ["喜欢(.+)速度最快。","本章未完(.+)下一(.+)更精彩！"]
     }
 }
