@@ -1,5 +1,5 @@
 {
-    "name": "飘天文学",
+    "name": "飘天中文ᶜᵒᵐ",
     "url": "www.piaotianzw.com",
     "version": 104,
     "search": {
@@ -28,8 +28,6 @@
     },
     "chapter": {
         "content": "#content",
-        "purify": [
-            "飘天中文网.+最新章节！"
-        ]
+        "purify":["您可以在百.+查找最新章节！","飘天中文(.+)\\n"]
     }
 }
