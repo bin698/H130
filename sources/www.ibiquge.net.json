@@ -1,7 +1,7 @@
 {
     "name": "笔趣阁ⁱ",
     "url": "www.ibiquge.net",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.ibiquge.net/search.html?name=${key}",
         "charset": "utf-8",
@@ -30,6 +30,6 @@
     "chapter": {
         "content": "#content",
         "filter": ["@p","@a"],
-        "purify": ["报送后维护人员会在两分钟内校正章节内容,请耐心等待。"]
+        "purify": ["您可以在百度.+最新章节！","报送后维护人员会在两分(.+)\\n"]        
     }
 }
