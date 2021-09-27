@@ -1,9 +1,9 @@
 {
-    "name": "笔趣库",
-    "url": "www.ibswtan.com",
+    "name": "笔趣阁ˢ",
+    "url": "www.biquges.com",
     "version": 101,
     "search": {
-        "url": "https://www.ibswtan.com//modules/article/search.php@post->searchkey=${key}",
+        "url": "https://www.biquges.com//modules/article/search.php@post->searchkey=${key}",
 		"charset": "utf-8",
         "list": "tbody>tr:nth-child(n+2)",
         "name": "td:nth-child(1)>a",
@@ -28,6 +28,5 @@
     },
     "chapter": {
         "content": "#content",
-        "purify": ["您可以在百度.+最新章节！","PS：(.+)\\n","章节错误.+耐心等待。","报送后维护人员会(.+)\\n","天才一秒记住本站(.+)\\n"]   
-    }
+        "purify": ["您可以在百度.+最新章节！","PS：(.+)\\n","章节错误.+耐心等待。","报送后维护人员会(.+)\\n","天才一秒记住本站(.+)\\n"]    }
 }
