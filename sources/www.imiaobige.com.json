@@ -1,7 +1,7 @@
 {
   "name": "妙笔阁ᶜᵒᵐ",
-  "url": "www.imiaobige.com/",
-  "version": 101,
+  "url": "www.imiaobige.com",
+  "version": 999,
   "search": {
       "url": "https://www.imiaobige.com/search.html@post->searchkey=${key}",
       "charset": "UTF-8",

@@ -1,5 +1,5 @@
 {
-    "name": "读一读ⁿᵉᵗ",
+    "name": "读一读ᵗ",
     "url": "duyidu.net",
     "version": 101,
     "search": {
@@ -28,7 +28,8 @@
     },
     "chapter": {
         "content": "#txtContent",
-        "filter": ["@script"]
+        "filter": ["@script"],
+        "purify": ["您可以在百度.+最新章节！","PS：(.+)\\n","章节错误.+耐心等待。","报送后维护人(.+)\\n","天才一秒记(.+)\\n"]
     },
     "auth": {
         "header": "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
