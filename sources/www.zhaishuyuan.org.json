@@ -1,34 +1,33 @@
 {
     "name": "斋书苑ᵒʳᵍ",
     "url": "www.zhaishuyuan.org",
-    "version": 107,
+    "version": 108,
     "search": {
         "url": "https://www.zhaishuyuan.org/search/?searchkey=${key}",
-        "charset": "gbk",
+        "charset": "gb2312",
         "list": "#sitembox > dl",
-        "name": "dd:nth-child(2) > h3 > a",
-        "author": "dd:nth-child(3) > span:nth-child(1)",
+        "name": "h3 > a",
+        "author": "dd.book_other > span:nth-child(1)",
         "cover": "dt > a > img",
-        "summary": ".book_des",
         "detail": "dt > a"
     },
     "detail": {
-        "name": "meta[property=og:novel:book_name]@attr->content",
+        "name": "meta[property=og:title]@attr->content",
         "author": "meta[property=og:novel:author]@attr->content",
         "cover": "meta[property=og:image]@attr->content",
-        "summary": "#bookintro > p",
+        "summary": "meta[property=og:description]@attr->content",
         "status": "meta[property=og:novel:status]@attr->content",
         "update": "meta[property=og:novel:update_time]@attr->content",
         "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
-        "catalog": ".motion > a:nth-child(1)@attr->href@replace->www.zhaishuyuan->m.zhaishuyuan"
+        "catalog": "div.motion > a"
     },
     "catalog": {
-        "list": ".newlist > ul > li",
+        "list": "#readerlists > ul > li",
         "name": "a",
         "chapter": "a",
-        "page": ".jump-list > a.pg-next@attr->data-url"
+        "page": "div.pages > a:gt(0)"
     },
     "chapter": {
-        "content": "#content > p"
+        "content": "#content"
     }
 }
