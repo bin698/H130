@@ -1,9 +1,9 @@
 {
     "name": "斋书苑ᵒʳᵍ",
     "url": "www.zhaishuyuan.org",
-    "version": 106,
+    "version": 107,
     "search": {
-        "url": "https://www.zhaishuyuan.org/search/@post->searchkey=${key}",
+        "url": "https://www.zhaishuyuan.org/search/?searchkey=${key}",
         "charset": "gbk",
         "list": "#sitembox > dl",
         "name": "dd:nth-child(2) > h3 > a",
