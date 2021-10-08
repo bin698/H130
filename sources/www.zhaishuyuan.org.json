@@ -1,10 +1,10 @@
 {
     "name": "斋书苑ᵒʳᵍ",
     "url": "www.zhaishuyuan.org",
-    "version": 108,
+    "version": 109,
     "search": {
         "url": "https://www.zhaishuyuan.org/search/?searchkey=${key}",
-        "charset": "gb2312",
+        "charset": "gbk",
         "list": "#sitembox > dl",
         "name": "h3 > a",
         "author": "dd.book_other > span:nth-child(1)",
